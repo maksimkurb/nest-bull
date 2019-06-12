@@ -9,7 +9,7 @@ import { NumberService } from './number.service';
 import { Job, DoneCallback } from 'bull';
 import { Logger } from '@nestjs/common';
 
-@Queue()
+@Queue({ name: 'test' })
 export class MyQueue {
   private readonly logger = new Logger(this.constructor.name);
 
